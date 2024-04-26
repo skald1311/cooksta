@@ -1,0 +1,5 @@
+Features: + Able to upload a photo with verified restaurant tags + item name on menu (optional). (not mvp: slideshow photos)
+	  + Restaurants rated as like/follower count (Bronze, Silver, Gold, Plat, Diamond)
+	  + Restaurants profile: tagged posts as main tab, second tab: own posted posts (menu?) + followers + likes
+	  + User profile: own posted posts + followers
+	  + Search bar for restaurants search, food keywords search, users search
