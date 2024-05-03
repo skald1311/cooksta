@@ -1,8 +1,30 @@
-Requirements: + Able to upload a photo with verified restaurant tags + item name on menu (optional). (not mvp: slideshow photos)
-	  + Restaurants rated through like/follower count (Bronze, Silver, Gold, Plat, Diamond)
-	  + Restaurants profile: tagged posts as main tab, second tab: own posted posts (menu?) + followers + likes
-	  + User profile: own posted posts + followers
-	  + Search bar for restaurants search, food keywords search, users search
-	  + Login with prefilled account
+Requirements (MVP):
+	- Authentication:
+		+ user can sign up or login (prefilled login demo account)
+		+ 2 types of account: user or restaurant
+	- Profile:
+		+ user/restaurant can upload an avatar, change their name, profile description
+		+ for user profile, can see posted posts + like count (sum of total like of all posts)
+		+ for restaurant profile, tagged posts as main tab, secondary tab: own posted posts (menu?), like count + ranking
+		+ Ranking for restaurant determined by like count (Bronze, Silver, Gold, Plat, Diamond) (threshold?)
+	- Post:
+		+ user can upload A photo of the food with the restaurant tags (required) + item name on menu (optional?) + location (optional?) (not mvp: multiple photos (slideshow))
+		+ restaurant can upload photos (item name on menu tag required?)
+		+ user/restaurant able to like posts; can see how many like a post has
+	- Feed:
+		+ Show all previous liked restaurants recent post (that we haven't seen: mvp?) first
+		+ Show all previous liked users recent post second
+		+ Random algorithm posts
+	- Search bar:
+		+ Can search using restaurants keyword, users keyword (respective order); food keyword (option to press see posts only then we search for food name) (mvp?)
+		+ Each restaurant result is represented by the avatar + description of profile
+		+ Pressed = go to that profile
+		
+		
+	
+		
+		
+
+			
 
 

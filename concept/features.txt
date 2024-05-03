@@ -1,0 +1,9 @@
+FEATURES CATEGORIES		
+- Authentication: /login and /signup		
+- Profile: /user/:userID
+- Post: /post/:postID
+- Feed: /feed
+- Search bar
+
+Home page: "/" with option either login or signup to choose then redirect to appropriate page
+After login or signup (auto-login), redirect to /feed with appropriate feed posts (no followed account === show random)
