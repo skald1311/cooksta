@@ -33,3 +33,13 @@ def view_post(request, postID):
     result = post_collection.find({"_id": o}).next()
     out = f'ID: {result["_id"]}, author: {result["author"]}, upload date: {result["upload_date"]}, like count: {result["like_count"]}'
     return HttpResponse(out)
+
+def like_post(request, postID):
+    """
+    Purpose: Like a post
+    """
+    # Convert string post ID into ObjectId class for mongodb search
+    o = ObjectId(postID)
+    # Search and increment like count by 1
+    post_collection.update_one({"_id": o}, {"$inc": {"like_count": 1}})
+    return HttpResponse(f'Post {postID} is liked.')
