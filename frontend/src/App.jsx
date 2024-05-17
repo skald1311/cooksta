@@ -5,33 +5,33 @@
 //     .then((data) => console.log(data));
 // }, []);
 
-import styled from "styled-components";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Feed from "./pages/Feed";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Post from "./pages/Post";
+import Settings from "./pages/Settings";
+import PageNotFound from "./pages/PageNotFound";
 import GlobalStyles from "./styles/GlobalStyles";
-import Button from "./ui/Button";
-import Input from "./ui/Input";
-
-const H1 = styled.h1`
-  font-size: 30px;
-  font-weight: 600;
-  background-color: var(--color-pink-200);
-`;
-
-const StyledApp = styled.div`
-  background-color: var(--color-pink-100);
-  padding: 20px;
-`;
+import AppLayout from "./ui/AppLayout";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <StyledApp>
-        <H1>Cooksta</H1>
-        <Input placeholder="username"></Input>
-        <Input placeholder="password"></Input>
-        <Button>Login</Button>
-        <Button>Sign up</Button>
-      </StyledApp>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<AppLayout />}>
+            <Route index element={<Navigate replace to="feed" />} />
+            <Route path="feed" element={<Feed />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="post" element={<Post />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
