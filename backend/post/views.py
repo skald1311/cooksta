@@ -11,7 +11,6 @@ def create_post(request):
     Purpose: Add a new post to the database
     """
     new_post = {
-        "post_id": uuid.uuid4(),
         "image": "some file/path?",
         "author": "some username",
         "upload_date": datetime.today().strftime("%Y %m %d"),
