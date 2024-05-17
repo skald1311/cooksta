@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
   --color-green-500: #22c55e;
   --color-rosepink: #e80869;
   --color-greypink: #afa6a2;
-  --color-pink-from-pic: #bd3a7f
+  --color-pinkfrompic: #bd3a7f;
   --color-yellow-100: #fef9c3;
   --color-yellow-700: #a16207;
   --color-silver-100: #e5e7eb;
