@@ -5,7 +5,7 @@ import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
 
 function SignUpForm() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function handleSubmit() {}
@@ -14,12 +14,12 @@ function SignUpForm() {
     <Form onSubmit={handleSubmit}>
       <FormRowVertical label="Username">
         <Input
-          type="email"
-          id="email"
+          type="username"
+          id="username"
           // This makes this form better for password managers
           autoComplete="username"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </FormRowVertical>
       <FormRowVertical label="Password">

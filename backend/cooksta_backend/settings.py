@@ -107,6 +107,9 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Adjust this to your React app's URL
 ]
 
+# CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://localhost:5173']
+
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 

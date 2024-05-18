@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import user_collection
 from django.http import HttpResponse
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import json
 
 # Create your views here.
 
@@ -9,8 +12,9 @@ def register(request):
     Purpose: Register a new user using info from form
     """
     new_user = {
-        "username": "john123",
+        "username": "demo_account",
         "password": "12345678",
+        "profile_pic": "some pic",
         "follower_count": 0,
         "liked_accounts": [],
         "posts": []
@@ -18,14 +22,19 @@ def register(request):
     user_collection.insert_one(new_user)
     return HttpResponse("New user created")
 
+@csrf_exempt
 def login(request):
     """
     Purpose: Attempt to login user using info inputted
     """
-    input_username = "john123"
-    input_password = "12345678"
-    result = user_collection.find({"username": input_username, "password": input_password }).next()
-    return HttpResponse(result["username"])
+    data = json.loads(request.body.decode('utf-8'))
+    username = data.get('username')
+    password = data.get('password')
+    result = user_collection.count_documents({"username": username, "password": password })
+    if (result == 0):
+        return JsonResponse({'message': 'Invalid username or password', 'status': 400}, status=400)
+    else:
+        return JsonResponse({'message': 'Login successful', 'status': 200}, status=200)
 
 def view_profile(request, username):
     """

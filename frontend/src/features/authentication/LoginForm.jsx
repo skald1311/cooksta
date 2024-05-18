@@ -3,23 +3,28 @@ import Button from "../../ui/Button";
 import Form from "../../ui/Form";
 import Input from "../../ui/Input";
 import FormRowVertical from "../../ui/FormRowVertical";
+import { login } from "../../services/apiAuth";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("demo_account");
+  const [password, setPassword] = useState("12345678");
 
-  function handleSubmit() {}
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!username || !password) return;
+    login({ username, password });
+  }
 
   return (
     <Form onSubmit={handleSubmit}>
       <FormRowVertical label="Username">
         <Input
-          type="email"
-          id="email"
+          type="username"
+          id="username"
           // This makes this form better for password managers
           autoComplete="username"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </FormRowVertical>
       <FormRowVertical label="Password">
@@ -32,7 +37,7 @@ function LoginForm() {
         />
       </FormRowVertical>
       <FormRowVertical>
-        <Button size="large">Login</Button>
+        <Button size="large">Log in</Button>
       </FormRowVertical>
     </Form>
   );
