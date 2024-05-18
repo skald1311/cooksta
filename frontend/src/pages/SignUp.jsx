@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import LoginForm from "../features/authentication/LoginForm";
 import Logo from "../ui/Logo";
 import Heading from "../ui/Heading";
-import SignUpOption from "../ui/SignUpOption";
+import LoginOption from "../ui/LoginOption";
+import SignUpForm from "../features/authentication/SignUpForm";
 
-const LoginLayout = styled.main`
+// Sign up form is exactly the same as the login form, except for minor changes
+
+const SignUpLayout = styled.main`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 48rem;
@@ -14,15 +16,15 @@ const LoginLayout = styled.main`
   background-color: var(--color-grey-50);
 `;
 
-function Login() {
+function SignUp() {
   return (
-    <LoginLayout>
+    <SignUpLayout>
       <Logo />
       <Heading as="h4">COOKSTA</Heading>
-      <LoginForm />
-      <SignUpOption />
-    </LoginLayout>
+      <SignUpForm />
+      <LoginOption />
+    </SignUpLayout>
   );
 }
 
-export default Login;
+export default SignUp;

@@ -1,5 +1,12 @@
+import FeedContainer from "../features/feed/FeedContainer";
+import Row from "../ui/Row";
+
 function Feed() {
-  return <div>This is the feed</div>;
+  return (
+    <Row>
+      <FeedContainer />
+    </Row>
+  );
 }
 
 export default Feed;

@@ -12,7 +12,8 @@ def register(request):
         "username": "john123",
         "password": "12345678",
         "follower_count": 0,
-        "liked_accounts": []
+        "liked_accounts": [],
+        "posts": []
     }
     user_collection.insert_one(new_user)
     return HttpResponse("New user created")
