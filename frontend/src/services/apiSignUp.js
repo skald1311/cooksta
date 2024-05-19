@@ -1,8 +1,8 @@
 import { toast } from "react-hot-toast";
 
-export async function login({ username, password }, dispatch) {
+export async function signUp({ username, password }, dispatch) {
   try {
-    const response = await fetch(`http://127.0.0.1:8000/user/login/`, {
+    const response = await fetch(`http://127.0.0.1:8000/user/register/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -13,10 +13,12 @@ export async function login({ username, password }, dispatch) {
     const data = await response.json();
     // console.log(data);
     if (data.status === 200) {
-      toast.success("Login successfully");
+      toast.success("Sign up successfully 🎉");
+      // setIsSignedUp(true);
       dispatch({ type: "login", payload: username });
     } else {
-      toast.error("Provided email or password are incorrect");
+      // status === 400: username already exists
+      toast.error("Username has already been taken");
     }
   } catch (err) {
     throw err;

@@ -8,20 +8,29 @@ import json
 
 # Create your views here.
 
+@csrf_exempt
 def register(request):
     """
     Purpose: Register a new user using info from form
     """
+    data = json.loads(request.body.decode('utf-8'))
+    username = data.get('username')
+    password = data.get('password')
+    # Check if the username already exists
+    count = user_collection.count_documents({"username": username})
+    if (count != 0):
+        return JsonResponse({'message': 'Sign up failed: Username has already been taken', 'status': 400}, status=400)
+    # Create new user object
     new_user = {
-        "username": "demo_account",
-        "password": "12345678",
-        "profile_pic": "some pic",
+        "username": username,
+        "password": password,
+        "profile_pic": "default pic",
         "follower_count": 0,
         "liked_accounts": [],
         "posts": []
     }
     user_collection.insert_one(new_user)
-    return HttpResponse("New user created")
+    return JsonResponse({'message': 'Sign up successful', 'status': 200}, status=200)
 
 @csrf_exempt
 def login(request):
