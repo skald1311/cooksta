@@ -3,6 +3,7 @@ from .models import user_collection
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+# from django.contrib.sessions.models import Session
 import json
 
 # Create your views here.
@@ -34,6 +35,7 @@ def login(request):
     if (result == 0):
         return JsonResponse({'message': 'Invalid username or password', 'status': 400}, status=400)
     else:
+        # request.session['user_id'] = username
         return JsonResponse({'message': 'Login successful', 'status': 200}, status=200)
 
 def view_profile(request, username):

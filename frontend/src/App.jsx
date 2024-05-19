@@ -17,6 +17,8 @@ import GlobalStyles from "./styles/GlobalStyles";
 import AppLayout from "./ui/AppLayout";
 import SignUp from "./pages/SignUp";
 import { Toaster } from "react-hot-toast";
+import ProtectedRoute from "./ui/ProtectedRoute";
+import { AuthProvider } from "./features/authentication/AuthContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,20 +32,28 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <GlobalStyles />
-      <BrowserRouter>
-        <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Navigate replace to="feed" />} />
-            <Route path="feed" element={<Feed />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="post" element={<Post />} />
-            <Route path="settings" element={<Settings />} />
-          </Route>
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<SignUp />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              element={
+                <ProtectedRoute>
+                  <AppLayout />
+                </ProtectedRoute>
+              }
+            >
+              <Route index element={<Navigate replace to="feed" />} />
+              <Route path="feed" element={<Feed />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="post" element={<Post />} />
+              <Route path="settings" element={<Settings />} />
+            </Route>
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
       <Toaster
         position="top-center"
         gutter={12}
