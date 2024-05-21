@@ -16,7 +16,7 @@ export async function login({ username, password }, dispatch) {
       toast.success("Login successfully");
       dispatch({ type: "login", payload: username });
     } else {
-      toast.error("Provided email or password are incorrect");
+      toast.error("Provided email or password is incorrect");
     }
   } catch (err) {
     throw err;
