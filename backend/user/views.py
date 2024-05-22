@@ -27,6 +27,7 @@ def register(request):
         "username": username,
         "password": password,
         "profile_pic": DEFAULT_PIC_BASE64,
+        "description": "this is a description",
         "follower_count": 0,
         "liked_accounts": [],
         "posts": []
@@ -56,3 +57,11 @@ def get_profile_pic(request, username):
     """
     result = user_collection.find({"username": username}).next()
     return JsonResponse(result['profile_pic'], safe=False)
+
+@csrf_exempt
+def get_profile_desc(request, username):
+    """
+    Purpose: Return profile pic base64 of given username
+    """
+    result = user_collection.find({"username": username}).next()
+    return JsonResponse(result['description'], safe=False)
