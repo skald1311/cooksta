@@ -49,10 +49,10 @@ def login(request):
         # request.session['user_id'] = username
         return JsonResponse({'message': 'Login successful', 'status': 200}, status=200)
 
-def view_profile(request, username):
+@csrf_exempt
+def get_profile_pic(request, username):
     """
-    Purpose: Return info of given username
+    Purpose: Return profile pic base64 of given username
     """
     result = user_collection.find({"username": username}).next()
-    out = f'username: {result["username"]}; follower_count: {result["follower_count"]}'
-    return HttpResponse(out)
+    return JsonResponse(result['profile_pic'], safe=False)

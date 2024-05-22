@@ -44,7 +44,7 @@ function App() {
             >
               <Route index element={<Navigate replace to="feed" />} />
               <Route path="feed" element={<Feed />} />
-              <Route path="profile" element={<Profile />} />
+              <Route path="profile/:username" element={<Profile />} />
               <Route path="post" element={<Post />} />
               <Route path="settings" element={<Settings />} />
             </Route>
