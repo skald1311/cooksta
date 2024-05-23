@@ -10,7 +10,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Feed from "./pages/Feed";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
-import Post from "./pages/Post";
+import CreatePost from "./pages/CreatePost";
 import Settings from "./pages/Settings";
 import PageNotFound from "./pages/PageNotFound";
 import GlobalStyles from "./styles/GlobalStyles";
@@ -47,7 +47,7 @@ function App() {
                 <Route index element={<Navigate replace to="feed" />} />
                 <Route path="feed" element={<Feed />} />
                 <Route path="profile/:username" element={<Profile />} />
-                <Route path="post" element={<Post />} />
+                <Route path="post" element={<CreatePost />} />
                 <Route path="settings" element={<Settings />} />
               </Route>
               <Route path="login" element={<Login />} />
