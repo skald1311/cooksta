@@ -3,6 +3,31 @@ import Form from "../ui/Form";
 import FormRowVertical from "../ui/FormRowVertical";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
+import styled from "styled-components";
+
+const FileInput = styled.input`
+  border: 1px solid var(--color-grey-300);
+  background-color: var(--color-grey-0);
+  border-radius: var(--border-radius-sm);
+  padding: 0.8rem 1.2rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  &::file-selector-button {
+    font-family: "Snowstorm", cursive;
+    // Medium
+    font-size: 1.4rem;
+    padding: 1.2rem 1.6rem;
+    font-weight: 500;
+    color: var(--color-pink-50);
+    background-color: var(--color-rosepink);
+    &:hover {
+      background-color: var(--color-pink-700);
+    }
+    border: none;
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+`;
 
 function CreatePost() {
   const [caption, setCaption] = useState("");
@@ -16,7 +41,7 @@ function CreatePost() {
   return (
     <Form onSubmit={handleSubmit}>
       <FormRowVertical label="Image">
-        <Input type="file" accept="image/*" />
+        <FileInput type="file" accept="image/*" id="image-input" />
       </FormRowVertical>
       <FormRowVertical label="Caption">
         <Input
