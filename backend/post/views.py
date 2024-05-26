@@ -30,8 +30,11 @@ def create_post(request):
         "item_name": item_name
     }
 
-    post_collection.insert_one(new_post)
-    return JsonResponse({"message": "New post is created.", "status": 200}, status=200)
+    insert_result = post_collection.insert_one(new_post)
+    # Grab the id of new post to add to the user's post array
+    added_post_id = str(insert_result.inserted_id)
+
+    return JsonResponse({"message": "New post is created.", "status": 200, "postID": added_post_id}, status=200)
 
 def view_post(request, postID):
     """ 

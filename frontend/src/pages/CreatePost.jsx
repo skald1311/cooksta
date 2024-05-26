@@ -66,6 +66,8 @@ function CreatePost() {
       itemName,
     };
     createPost(dataToBeSend);
+    handleReset();
+    toast.success("Post successfully added!");
   }
 
   return (

@@ -64,3 +64,20 @@ def get_profile_desc(request, username):
     """
     result = user_collection.find({"username": username}).next()
     return JsonResponse(result['description'], safe=False)
+
+@csrf_exempt
+def add_post_to_account(request, username):
+    """
+    Purpose: After posting a post, add the postID to the account's post array
+    """
+    data = json.loads(request.body.decode('utf-8'))
+    new_post_id = data.get('created_postID') 
+    update_result = user_collection.update_one({"username": username}, {"$push": {
+        "posts": new_post_id
+    }})
+    message = ""
+    if update_result.modified_count > 0:
+        message = "Document updated successfully"
+    else:
+        message = "No document was updated"
+    return JsonResponse({"message": message, "status": 200})
