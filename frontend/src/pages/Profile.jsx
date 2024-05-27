@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { getProfileDesc, getProfilePic } from "../services/apiProfile";
 import { useEffect, useState } from "react";
 import { HiHandThumbUp } from "react-icons/hi2";
+import ProfilePostContainer from "../ui/ProfilePostContainer";
 
 const StyledUserAvatar = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const StyledUserAvatar = styled.div`
 
 const Avatar = styled.img`
   display: block;
-  width: 8rem;
+  width: 9rem;
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
@@ -65,8 +66,15 @@ const RankAndLikeCountContainer = styled.div`
 const GreyBar = styled.div`
   width: 0.5px;
   height: 80px;
-  background-color: var(--color-grey-0);
+  background-color: var(--color-grey-200);
   margin: 0 10px;
+`;
+
+const SeparateBar = styled.div`
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--color-grey-200);
+  margin-top: 25px;
 `;
 
 const StyledProfileRow = styled.div`
@@ -95,31 +103,35 @@ function Profile() {
   }, [username]);
 
   return (
-    <StyledProfileRow>
-      <Row type="horizontal">
-        <StyledUserAvatar>
-          <Avatar
-            src={`data:image/jpg;base64,${profilePic}`}
-            alt={`Avatar of ${username}`}
-          />
-        </StyledUserAvatar>
-        <StyledUserInfoRow>
-          <Heading as="h3">{username}</Heading>
-          <p>{profileDesc}</p>
-        </StyledUserInfoRow>
-      </Row>
-      <RankAndLikeCountContainer>
-        <Row>
-          <img src="/platinum.png" alt="Chef Hat Platinum" />
-          <p>Platinum</p>
+    <>
+      <StyledProfileRow>
+        <Row type="horizontal">
+          <StyledUserAvatar>
+            <Avatar
+              src={`data:image/jpg;base64,${profilePic}`}
+              alt={`Avatar of ${username}`}
+            />
+          </StyledUserAvatar>
+          <StyledUserInfoRow>
+            <Heading as="h3">{username}</Heading>
+            <p>{profileDesc}</p>
+          </StyledUserInfoRow>
         </Row>
-        <GreyBar></GreyBar>
-        <Row>
-          <HiHandThumbUp size={40} />
-          <p>1.13k</p>
-        </Row>
-      </RankAndLikeCountContainer>
-    </StyledProfileRow>
+        <RankAndLikeCountContainer>
+          <Row>
+            <img src="/platinum.png" alt="Chef Hat Platinum" />
+            <p>Platinum</p>
+          </Row>
+          <GreyBar></GreyBar>
+          <Row>
+            <HiHandThumbUp size={40} />
+            <p>1.13k</p>
+          </Row>
+        </RankAndLikeCountContainer>
+      </StyledProfileRow>
+      <SeparateBar />
+      <ProfilePostContainer />
+    </>
   );
 }
 
