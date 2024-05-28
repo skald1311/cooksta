@@ -29,7 +29,8 @@ def register(request):
         "description": "this is a description",
         "follower_count": 0,
         "liked_accounts": [],
-        "posts": []
+        "posts": [],
+        "rank": "bronze"
     }
     user_collection.insert_one(new_user)
     return JsonResponse({'message': 'Sign up successful', 'status': 200}, status=200)
@@ -64,6 +65,30 @@ def get_profile_desc(request, username):
     """
     result = user_collection.find({"username": username}).next()
     return JsonResponse(result['description'], safe=False)
+
+@csrf_exempt
+def get_profile_rank(request, username):
+    """
+    Purpose: Return rank of given username
+    """
+    result = user_collection.find({"username": username}).next()
+    return JsonResponse(result['rank'], safe=False)
+
+@csrf_exempt
+def get_profile_like_count(request, username):
+    """
+    Purpose: Return like count of given username
+    """
+    result = user_collection.find({"username": username}).next()
+    return JsonResponse(result['follower_count'], safe=False)
+
+@csrf_exempt
+def get_profile_posts(request, username):
+    """
+    Purpose: Return profile post IDs of given username
+    """
+    result = user_collection.find({"username": username}).next()
+    return JsonResponse({"postArray" : result['posts']}, safe=False)
 
 @csrf_exempt
 def add_post_to_account(request, username):

@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { getPostImage } from "../services/apiPost";
+import SpinnerMini from "./SpinnerMini";
 
 const StyledPost = styled.div`
   img {
@@ -8,10 +11,27 @@ const StyledPost = styled.div`
   }
 `;
 
-function ProfilePost() {
+function ProfilePost({ postID }) {
+  const [postImageBase64, setPostImageBase64] = useState("");
+
+  useEffect(
+    function () {
+      const fetchPostImage = async () => {
+        const res = await getPostImage(postID);
+        setPostImageBase64(res["base64string"]);
+      };
+      fetchPostImage();
+    },
+    [postID]
+  );
+
   return (
     <StyledPost>
-      <img src="/demo_pic.jpg" alt="dfda" />
+      {postImageBase64 ? (
+        <img src={`data:image/jpg;base64,${postImageBase64}`} alt="post img" />
+      ) : (
+        <SpinnerMini />
+      )}
     </StyledPost>
   );
 }

@@ -2,10 +2,16 @@ import Row from "../ui/Row";
 import Heading from "../ui/Heading";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import { getProfileDesc, getProfilePic } from "../services/apiProfile";
+import {
+  getProfileDesc,
+  getProfileLikeCount,
+  getProfilePic,
+  getProfileRank,
+} from "../services/apiProfile";
 import { useEffect, useState } from "react";
 import { HiHandThumbUp } from "react-icons/hi2";
 import ProfilePostContainer from "../ui/ProfilePostContainer";
+import SpinnerMini from "../ui/SpinnerMini";
 
 const StyledUserAvatar = styled.div`
   display: flex;
@@ -87,14 +93,20 @@ function Profile() {
   let { username } = useParams();
   const [profilePic, setProfilePic] = useState(null);
   const [profileDesc, setProfileDesc] = useState("");
+  const [profileRank, setProfileRank] = useState("");
+  const [profileLikeCount, setProfileLikeCount] = useState(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const ppf_base64 = await getProfilePic(username);
         const profile_desc = await getProfileDesc(username);
+        const profile_rank = await getProfileRank(username);
+        const profile_like_count = await getProfileLikeCount(username);
         setProfilePic(ppf_base64);
         setProfileDesc(profile_desc);
+        setProfileRank(profile_rank);
+        setProfileLikeCount(profile_like_count);
       } catch (err) {
         console.error("Error fetching profile: ", err);
       }
@@ -107,25 +119,42 @@ function Profile() {
       <StyledProfileRow>
         <Row type="horizontal">
           <StyledUserAvatar>
-            <Avatar
-              src={`data:image/jpg;base64,${profilePic}`}
-              alt={`Avatar of ${username}`}
-            />
+            {profilePic ? (
+              <Avatar
+                src={`data:image/jpg;base64,${profilePic}`}
+                alt={`Avatar of ${username}`}
+              />
+            ) : (
+              <SpinnerMini />
+            )}
           </StyledUserAvatar>
           <StyledUserInfoRow>
             <Heading as="h3">{username}</Heading>
-            <p>{profileDesc}</p>
+            {profileDesc ? <p>{profileDesc}</p> : <SpinnerMini />}
           </StyledUserInfoRow>
         </Row>
         <RankAndLikeCountContainer>
           <Row>
-            <img src="/platinum.png" alt="Chef Hat Platinum" />
-            <p>Platinum</p>
+            {profileRank ? (
+              <>
+                <img
+                  src={`/${profileRank}.png`}
+                  alt={`Chef Hat ${profileRank}`}
+                />
+                <p>{profileRank.toUpperCase()}</p>
+              </>
+            ) : (
+              <SpinnerMini />
+            )}
           </Row>
           <GreyBar></GreyBar>
           <Row>
             <HiHandThumbUp size={40} />
-            <p>1.13k</p>
+            {profileLikeCount !== null ? (
+              <p>{profileLikeCount}</p>
+            ) : (
+              <SpinnerMini />
+            )}
           </Row>
         </RankAndLikeCountContainer>
       </StyledProfileRow>

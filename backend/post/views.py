@@ -36,17 +36,16 @@ def create_post(request):
 
     return JsonResponse({"message": "New post is created.", "status": 200, "postID": added_post_id}, status=200)
 
-def view_post(request, postID):
+@csrf_exempt
+def get_post_image(request, postID):
     """ 
-    Purpose: Show post info given postID
+    Purpose: Return post image given postID
     """
-
     # Convert string post ID into ObjectId class for mongodb search
     o = ObjectId(postID)
     # Search with ObjectId of post
     result = post_collection.find({"_id": o}).next()
-    out = f'ID: {result["_id"]}, author: {result["author"]}, upload date: {result["upload_date"]}, like count: {result["like_count"]}'
-    return JsonResponse({"message": out})
+    return JsonResponse({"base64string": result["image"]}, status=200)
 
 def like_post(request, postID):
     """
