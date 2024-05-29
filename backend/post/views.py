@@ -37,7 +37,7 @@ def create_post(request):
     return JsonResponse({"message": "New post is created.", "status": 200, "postID": added_post_id}, status=200)
 
 @csrf_exempt
-def get_post_image(request, postID):
+def get_post_info(request, postID):
     """ 
     Purpose: Return post image given postID
     """
@@ -45,8 +45,8 @@ def get_post_image(request, postID):
     o = ObjectId(postID)
     # Search with ObjectId of post
     result = post_collection.find({"_id": o}).next()
-    return JsonResponse({"base64string": result["image"]}, status=200)
-
+    return JsonResponse({"image": result["image"], "author": result["author"], "upload_date": result["upload_date"], "like_count": result["like_count"], "caption": result["caption"], "location": result["location"], "item_name": result["item_name"]}, status=200)
+    
 def like_post(request, postID):
     """
     Purpose: Like a post

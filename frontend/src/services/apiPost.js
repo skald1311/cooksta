@@ -1,5 +1,5 @@
-export async function getPostImage(postID) {
-  const response = await fetch(`http://127.0.0.1:8000/post/${postID}/image`, {
+export async function getPostInfo(postID) {
+  const response = await fetch(`http://127.0.0.1:8000/post/${postID}/info`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
