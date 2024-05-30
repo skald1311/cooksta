@@ -20,6 +20,7 @@ import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import { AuthProvider } from "./features/authentication/AuthContext";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import Post from "./pages/Post";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -48,6 +49,7 @@ function App() {
                 <Route path="feed" element={<Feed />} />
                 <Route path="profile/:username" element={<Profile />} />
                 <Route path="post" element={<CreatePost />} />
+                <Route path="post/:postID" element={<Post />} />
                 <Route path="settings" element={<Settings />} />
               </Route>
               <Route path="login" element={<Login />} />

@@ -47,6 +47,7 @@ def get_post_info(request, postID):
     result = post_collection.find({"_id": o}).next()
     return JsonResponse({"image": result["image"], "author": result["author"], "upload_date": result["upload_date"], "like_count": result["like_count"], "caption": result["caption"], "location": result["location"], "item_name": result["item_name"]}, status=200)
     
+@csrf_exempt
 def like_post(request, postID):
     """
     Purpose: Like a post
@@ -56,3 +57,14 @@ def like_post(request, postID):
     # Search and increment like count by 1
     post_collection.update_one({"_id": o}, {"$inc": {"like_count": 1}})
     return JsonResponse({"message": f'Post {postID} is liked.'})
+
+@csrf_exempt
+def unlike_post(request, postID):
+    """
+    Purpose: Unlike a post
+    """
+    # Convert string post ID into ObjectId class for mongodb search
+    o = ObjectId(postID)
+    # Search and increment like count by 1
+    post_collection.update_one({"_id": o}, {"$inc": {"like_count": -1}})
+    return JsonResponse({"message": f'Post {postID} is unliked.'})

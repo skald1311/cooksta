@@ -106,3 +106,19 @@ def add_post_to_account(request, username):
     else:
         message = "No document was updated"
     return JsonResponse({"message": message, "status": 200})
+
+@csrf_exempt
+def increment_follower(request, username):
+    """
+    Purpose: Called after an user like one of <username>'s post to increment the account's like count
+    """
+    user_collection.update_one({"username": username}, {"$inc": {"follower_count": 1}})
+    return JsonResponse({"message": f"Follower count for {username} has been increased."}, status=200)
+
+@csrf_exempt
+def decrement_follower(request, username):
+    """
+    Purpose: Called after an user like one of <username>'s post to increment the account's like count
+    """
+    user_collection.update_one({"username": username}, {"$inc": {"follower_count": -1}})
+    return JsonResponse({"message": f"Follower count for {username} has been increased."}, status=200)

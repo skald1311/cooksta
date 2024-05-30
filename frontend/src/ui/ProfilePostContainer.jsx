@@ -33,7 +33,7 @@ function ProfilePostContainer() {
   return (
     <StyledProfilePostContainer>
       {userPosts?.map((postID) => (
-        <ProfilePost postID={postID} />
+        <ProfilePost postID={postID} key={postID} />
       ))}
     </StyledProfilePostContainer>
   );

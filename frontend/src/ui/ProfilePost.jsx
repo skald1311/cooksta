@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { getPostInfo } from "../services/apiPost";
 import SpinnerMini from "./SpinnerMini";
 import { HiHeart } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
 
 const StyledPost = styled.div`
   position: relative;
@@ -33,13 +34,14 @@ const Overlay = styled.div`
   }
 `;
 
-function handleClick() {
-  console.log("ahsdfhsadhf");
-}
-
 function ProfilePost({ postID }) {
   const [postImageBase64, setPostImageBase64] = useState("");
   const [postLikeCount, setPostLikeCount] = useState(null);
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`/post/${postID}`, { replace: true });
+  }
 
   useEffect(
     function () {

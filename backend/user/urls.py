@@ -9,5 +9,7 @@ urlpatterns = [
     path('<username>/rank', views.get_profile_rank),
     path('<username>/like_count', views.get_profile_like_count),
     path('<username>/getProfilePosts', views.get_profile_posts),
-    path('<username>/addPost', views.add_post_to_account)
+    path('<username>/addPost', views.add_post_to_account),
+    path('<username>/increment_follower', views.increment_follower),
+    path('<username>/decrement_follower', views.decrement_follower)
 ]
