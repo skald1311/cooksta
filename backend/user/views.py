@@ -122,3 +122,21 @@ def decrement_follower(request, username):
     """
     user_collection.update_one({"username": username}, {"$inc": {"follower_count": -1}})
     return JsonResponse({"message": f"Follower count for {username} has been increased."}, status=200)
+
+@csrf_exempt
+def change_password(request, username):
+    """
+    Purpose: Change the password of <username> to new password
+    """
+    data = json.loads(request.body.decode('utf-8'))
+    new_password = data.get("newPassword")
+    user_collection.update_one({"username": username}, {"$set": {"password": new_password}})
+    return JsonResponse({"message": "Successfully updated password", "status": 200}, status=200)
+
+@csrf_exempt
+def get_password(request, username):
+    """
+    Purpose: Get password of <username>
+    """
+    result = user_collection.find({"username": username}).next()
+    return JsonResponse({"password" : result['password']}, safe=False)
