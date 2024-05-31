@@ -123,15 +123,6 @@ function Post() {
                 alt="post img"
               />
             </ImageContainer>
-            <LikeContainer>
-              <ButtonIcon onClick={handleLike}>
-                {like ? <FaHeart /> : <FaRegHeart />}
-              </ButtonIcon>
-              &nbsp;
-              <span>
-                {like ? postData["like_count"] + 1 : postData["like_count"]}
-              </span>
-            </LikeContainer>
           </Row>
           <Row>
             <StyledUserAvatar
@@ -171,6 +162,15 @@ function Post() {
               &nbsp;
               <span>{postData["upload_date"]}</span>
             </TextContainer>
+            <LikeContainer>
+              <ButtonIcon onClick={handleLike}>
+                {like ? <FaHeart /> : <FaRegHeart />}
+              </ButtonIcon>
+              &nbsp;
+              <span>
+                {like ? postData["like_count"] + 1 : postData["like_count"]}
+              </span>
+            </LikeContainer>
           </Row>
         </>
       ) : (

@@ -40,7 +40,7 @@ function ProfilePost({ postID }) {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate(`/post/${postID}`, { replace: true });
+    navigate(`/post/${postID}`);
   }
 
   useEffect(
