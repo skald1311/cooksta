@@ -25,7 +25,7 @@ const FileInput = styled.input`
     color: var(--color-pink-50);
     background-color: var(--color-rosepink);
     &:hover {
-      background-color: var(--color-pink-700);
+      background-color: var(--color-button-hover);
     }
     border: none;
     border-radius: var(--border-radius-sm);

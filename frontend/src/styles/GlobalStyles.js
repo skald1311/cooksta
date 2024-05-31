@@ -19,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
   --color-pink-700: #be185d;
   --color-pink-800: #9d174d;
   --color-pink-900: #831843;
+
+  --color-button-hover: #be185d;
     
   /* Grey */
   --color-grey-0: #fff;
@@ -72,6 +74,8 @@ const GlobalStyles = createGlobalStyle`
   --color-pink-700: #e5e7eb;
   --color-pink-800: #f3f4f6;
   --color-pink-900: #f9fafb;
+
+  --color-button-hover: #be185d;
 
   --color-grey-0: #18212f;
   --color-grey-50: #111827;

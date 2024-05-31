@@ -140,3 +140,23 @@ def get_password(request, username):
     """
     result = user_collection.find({"username": username}).next()
     return JsonResponse({"password" : result['password']}, safe=False)
+
+@csrf_exempt
+def change_pfp(request, username):
+    """
+    Purpose: Change profile picture of <username>
+    """
+    data = json.loads(request.body.decode('utf-8'))
+    new_pfp = data.get("newPic")
+    user_collection.update_one({"username": username}, {"$set": {"profile_pic": new_pfp}})
+    return JsonResponse({"message": "Successfully updated profile picture", "status": 200}, status=200)
+
+@csrf_exempt
+def change_desc(request, username):
+    """
+    Purpose: Change description of <username>
+    """
+    data = json.loads(request.body.decode('utf-8'))
+    new_desc = data.get("newDescription")
+    user_collection.update_one({"username": username}, {"$set": {"description": new_desc}})
+    return JsonResponse({"message": "Successfully updated profile description", "status": 200}, status=200)

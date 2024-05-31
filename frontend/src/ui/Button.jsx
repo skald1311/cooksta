@@ -26,7 +26,7 @@ const variations = {
     background-color: var(--color-rosepink);
 
     &:hover {
-      background-color: var(--color-pink-700);
+      background-color: var(--color-button-hover);
     }
   `,
   secondary: css`

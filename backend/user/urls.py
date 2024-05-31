@@ -13,5 +13,7 @@ urlpatterns = [
     path('<username>/increment_follower', views.increment_follower),
     path('<username>/decrement_follower', views.decrement_follower),
     path('<username>/change_password', views.change_password),
-    path('<username>/get_password', views.get_password)
+    path('<username>/get_password', views.get_password),
+    path('<username>/change_pfp', views.change_pfp),
+    path('<username>/change_description', views.change_desc)
 ]
