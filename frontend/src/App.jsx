@@ -1,10 +1,3 @@
-// import { useEffect } from "react";
-// useEffect(function () {
-//   fetch(`http://127.0.0.1:8000/user/login/`)
-//     .then((res) => res.json())
-//     .then((data) => console.log(data));
-// }, []);
-
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Feed from "./pages/Feed";
 import Login from "./pages/Login";
