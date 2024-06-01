@@ -5,6 +5,7 @@ from datetime import datetime
 from bson import ObjectId
 from django.views.decorators.csrf import csrf_exempt
 import json
+import random
 
 # Create your views here.
 
@@ -68,3 +69,15 @@ def unlike_post(request, postID):
     # Search and increment like count by 1
     post_collection.update_one({"_id": o}, {"$inc": {"like_count": -1}})
     return JsonResponse({"message": f'Post {postID} is unliked.'})
+
+@csrf_exempt
+def get_posts(request):
+    """
+    Purpose: Return all posts shuffled
+    """
+    cursor = post_collection.find({}, {"_id"})
+    result = []
+    for document in cursor:
+        result.append(str(document["_id"]))
+    random.shuffle(result)
+    return JsonResponse(result, status=200, safe=False)

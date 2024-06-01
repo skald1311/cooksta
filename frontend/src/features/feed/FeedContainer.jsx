@@ -1,35 +1,42 @@
-import { useQuery } from "@tanstack/react-query";
 import styled from "styled-components";
+import PostCard from "../../ui/PostCard";
+import { useEffect, useState } from "react";
+import { getPosts } from "../../services/apiPost";
 
-const Table = styled.div`
-  border: 1px solid var(--color-grey-200);
-
-  font-size: 1.4rem;
-  background-color: var(--color-grey-0);
-  border-radius: 7px;
-  overflow: hidden;
+const SeparateBar = styled.div`
+  width: 100%;
+  height: 0.5px;
+  background-color: var(--color-grey-200);
+  margin: 5px;
 `;
 
-const TableHeader = styled.header`
+const StyledFeedContainer = styled.div`
   display: grid;
-  grid-template-columns: 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr;
-  column-gap: 2.4rem;
-  align-items: center;
-
-  background-color: var(--color-grey-50);
-  border-bottom: 1px solid var(--color-grey-100);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  font-weight: 600;
-  color: var(--color-grey-600);
-  padding: 1.6rem 2.4rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 `;
 
 function FeedContainer() {
-  // useQuery({
-  //     queryKey:
-  // })
-  return <div>Feed Container</div>;
+  const [posts, setPosts] = useState([]);
+
+  useEffect(function () {
+    const fetchPosts = async () => {
+      const data = await getPosts();
+      setPosts(data);
+    };
+    fetchPosts();
+  }, []);
+
+  return (
+    <StyledFeedContainer>
+      {posts?.map((postID) => (
+        <>
+          <PostCard postID={postID} />
+          <SeparateBar />
+        </>
+      ))}
+    </StyledFeedContainer>
+  );
 }
 
 export default FeedContainer;

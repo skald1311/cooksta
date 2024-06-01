@@ -159,7 +159,7 @@ function Profile() {
         </RankAndLikeCountContainer>
       </StyledProfileRow>
       <SeparateBar />
-      <ProfilePostContainer />
+      <ProfilePostContainer user={username} />
     </>
   );
 }

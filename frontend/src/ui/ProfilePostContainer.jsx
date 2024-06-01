@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ProfilePost from "./ProfilePost";
-import { useAuth } from "../features/authentication/AuthContext";
 import { useEffect, useState } from "react";
 import { getProfilePosts } from "../services/apiProfile";
 
@@ -11,8 +10,7 @@ const StyledProfilePostContainer = styled.div`
   grid-gap: 5px;
 `;
 
-function ProfilePostContainer() {
-  const { user } = useAuth();
+function ProfilePostContainer({ user }) {
   const [userPosts, setUserPosts] = useState([]);
 
   useEffect(
@@ -20,7 +18,7 @@ function ProfilePostContainer() {
       const fetchPostArray = async () => {
         try {
           const res = await getProfilePosts(user);
-          setUserPosts(res["postArray"]);
+          setUserPosts(res["postArray"].reverse());
         } catch (err) {
           console.error("Error fetching post array: ", err);
         }

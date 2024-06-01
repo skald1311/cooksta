@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { getPostInfo, likePost, unlikePost } from "../services/apiPost";
-import Row from "../ui/Row";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import SpinnerMini from "../ui/SpinnerMini";
+import { getPostInfo, likePost, unlikePost } from "../services/apiPost";
 import {
   decrementFollower,
   getProfilePic,
   incrementFollower,
 } from "../services/apiProfile";
-import ButtonIcon from "../ui/ButtonIcon";
-
+import Row from "./Row";
+import SpinnerMini from "./SpinnerMini";
 import { HiPencil } from "react-icons/hi2";
 import { PiForkKnifeFill } from "react-icons/pi";
 import {
+  FaHeart,
   FaLocationDot,
   FaRegCalendarPlus,
-  FaHeart,
   FaRegHeart,
 } from "react-icons/fa6";
+import ButtonIcon from "./ButtonIcon";
 
 const StyledContainer = styled.div`
   display: grid;
@@ -50,12 +49,13 @@ const ImageContainer = styled.div`
   width: 100%;
   max-width: 350px;
   height: auto;
+  cursor: pointer;
 `;
 
 const TextContainer = styled.div`
   max-width: 300px;
   overflow-wrap: break-word;
-  font-size: 2rem;
+  font-size: 1.85rem;
   margin-left: 10px;
 `;
 
@@ -63,13 +63,18 @@ const LikeContainer = styled.div`
   display: flex;
   justify-content: left;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
 `;
 
-function Post() {
-  let { postID } = useParams();
-  const navigate = useNavigate();
+const CustomRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-top: 5rem;
+`;
 
+function PostCard({ postID }) {
+  const navigate = useNavigate();
   const [postData, setPostData] = useState(null);
   const [profilePic, setProfilePic] = useState(null);
   const [like, setLike] = useState(false);
@@ -118,14 +123,6 @@ function Post() {
       {postData ? (
         <>
           <Row>
-            <ImageContainer>
-              <img
-                src={`data:image/jpg;base64,${postData["image"]}`}
-                alt="post img"
-              />
-            </ImageContainer>
-          </Row>
-          <Row>
             <StyledUserAvatar
               onClick={() => navigate(`/profile/${postData["author"]}`)}
             >
@@ -141,6 +138,18 @@ function Post() {
                 <SpinnerMini />
               )}
             </StyledUserAvatar>
+            <ImageContainer
+              onClick={() => {
+                navigate(`/post/${postID}`);
+              }}
+            >
+              <img
+                src={`data:image/jpg;base64,${postData["image"]}`}
+                alt="post img"
+              />
+            </ImageContainer>
+          </Row>
+          <CustomRow>
             <TextContainer>
               <HiPencil />
               &nbsp;
@@ -170,7 +179,7 @@ function Post() {
                 {like ? postData["like_count"] + 1 : postData["like_count"]}
               </span>
             </LikeContainer>
-          </Row>
+          </CustomRow>
         </>
       ) : (
         <SpinnerMini />
@@ -179,4 +188,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default PostCard;
