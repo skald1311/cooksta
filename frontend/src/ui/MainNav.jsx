@@ -7,6 +7,7 @@ import {
   HiOutlineCog6Tooth,
 } from "react-icons/hi2";
 import { useAuth } from "../features/authentication/AuthContext";
+import Footer from "./Footer";
 
 const NavList = styled.ul`
   display: flex;
@@ -56,34 +57,37 @@ const StyledNavLink = styled(NavLink)`
 function MainNav() {
   const { user } = useAuth();
   return (
-    <nav>
-      <NavList>
-        <li>
-          <StyledNavLink to="/feed">
-            <HiOutlineHome />
-            <span>Home</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/post">
-            <HiOutlinePlus />
-            <span>Create</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to={`/profile/${user}`}>
-            <HiOutlineUser />
-            <span>Profile</span>
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/settings">
-            <HiOutlineCog6Tooth />
-            <span>Settings</span>
-          </StyledNavLink>
-        </li>
-      </NavList>
-    </nav>
+    <>
+      <nav>
+        <NavList>
+          <li>
+            <StyledNavLink to="/feed">
+              <HiOutlineHome />
+              <span>Home</span>
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/post">
+              <HiOutlinePlus />
+              <span>Create</span>
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to={`/profile/${user}`}>
+              <HiOutlineUser />
+              <span>Profile</span>
+            </StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to="/settings">
+              <HiOutlineCog6Tooth />
+              <span>Settings</span>
+            </StyledNavLink>
+          </li>
+        </NavList>
+      </nav>
+      <Footer />
+    </>
   );
 }
 
