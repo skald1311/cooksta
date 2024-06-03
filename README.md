@@ -246,3 +246,4 @@ Project Link: [cooksta.netlify.app](https://cooksta.netlify.app/)
 [ReactRouter-badge]: https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat
 [ReactRouter-url]: https://reactrouter.com/en/main
 
+<!--https://badges.pages.dev-->
