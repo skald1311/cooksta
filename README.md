@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/skald1311/film-vault">
-    <img src="https://github.com/skald1311/film-vault/assets/84189062/13a7ad63-2361-4473-99d1-4eb45c077a02" alt="Logo" width="100" height="100">
+  <a href="https://github.com/skald1311/cooksta">
+    <img src="https://github.com/skald1311/cooksta/assets/84189062/c1fe4f6f-14a0-40ef-a65d-7745493b9c35" alt="Logo" width="100" height="100">
   </a>
 
 
