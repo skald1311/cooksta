@@ -94,7 +94,9 @@ Originally conceived as a course project, Film Vault has evolved into a personal
 * [![CSS][CSS-badge]][CSS-url]
 * [![Styled-components][Styled-Component-badge]][Styled-Component-url]
 * [![Netlify][Netlify-badge]][Netlify-url]
+  
 <br/>
+
 *Backend:*
 * [![Python][Python-badge]][Python-url]
 * [![Django][Django-badge]][Django-url]
