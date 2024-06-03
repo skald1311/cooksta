@@ -18,7 +18,9 @@
     <a href="https://film-vault-dmhoang.netlify.app"><strong>LIVE DEMO</strong></a>
     <br />
     <br />
-    <a>[![React][React-badge]][React-url]</a>
+    <a href="https://github.com/skald1311/film-vault/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/skald1311/film-vault/issues">Request Feature</a>
   </p>
 </div>
 
