@@ -18,23 +18,17 @@
     <a href="https://film-vault-dmhoang.netlify.app"><strong>LIVE DEMO</strong></a>
     <br />
     <br />
-    <p>
-    [![React][React-badge]][React-url]
+</div>
+
+[![React][React-badge]][React-url]
 [![JavaScript][Javascript-badge]][Javascript-url]
 [![HTML5][HTML5-badge]][HTML5-url]
 [![CSS][CSS-badge]][CSS-url]
 [![Styled-components][Styled-Component-badge]][Styled-Component-url]
 [![Netlify][Netlify-badge]][Netlify-url]
-      </p>
-    ·
-    <p>
 [![Python][Python-badge]][Python-url]
 [![Django][Django-badge]][Django-url]
 [![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
-    </p>
-  </p>
-</div>
-
 
 
 <!-- TABLE OF CONTENTS -->
