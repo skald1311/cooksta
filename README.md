@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/skald1311/cooksta">
-    <img src="https://github.com/skald1311/cooksta/assets/84189062/c1fe4f6f-14a0-40ef-a65d-7745493b9c35" alt="Logo" width="100" height="100">
+    <img src="https://github.com/skald1311/cooksta/assets/84189062/c7f6cdbe-87eb-4aff-abd7-0ce7a68b0120" alt="Logo" width="100" height="100">
   </a>
 
 
