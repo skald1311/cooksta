@@ -199,4 +199,6 @@ Project Link: [github.com/skald1311/film-vault](https://github.com/skald1311/fil
 [AWS-EC2-url]: https://aws.amazon.com/ec2/
 [Mongo-badge]: https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat
 [Mongo-url]: https://www.mongodb.com
+[ReactRouter-badge]: https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat
+[ReactRouter-url]: https://reactrouter.com/en/main
 
