@@ -15,14 +15,16 @@
   <p align="center">
     Effortlessly track and rate your watched movies with this React-powered app
     <br />
-    <a href="https://film-vault-dmhoang.netlify.app"><strong>LIVE DEMO</strong></a>
+    <a href="https://cooksta.netlify.app/"><strong>LIVE DEMO</strong></a>
     <br />
     <br />
-    <a href="https://github.com/skald1311/film-vault/issues">Report Bug</a>
+    <a href="https://github.com/skald1311/cooksta/issues">Report Bug</a>
     ·
-    <a href="https://github.com/skald1311/film-vault/issues">Request Feature</a>
+    <a href="https://github.com/skald1311/cooksta/issues">Request Feature</a>
   </p>
 </div>
+
+<br/>
 
 [![React][React-badge]][React-url]
 [![JavaScript][Javascript-badge]][Javascript-url]
@@ -116,7 +118,7 @@ Originally conceived as a course project, Film Vault has evolved into a personal
 <!-- GETTING STARTED -->
 ## Installation
 
-**LIVE DEMO [HERE](https://film-vault-dmhoang.netlify.app)**
+**LIVE DEMO [HERE](https://cooksta.netlify.app/)**
 
 **Instructions for setting it up locally**
 
@@ -170,7 +172,7 @@ Don't forget to give the project a star! Thanks again!
 
 Duong Hoang - [LinkedIn](https://www.linkedin.com/in/hmd1311/)
 
-Project Link: [github.com/skald1311/film-vault](https://github.com/skald1311/film-vault)
+Project Link: [cooksta.netlify.app](https://cooksta.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
