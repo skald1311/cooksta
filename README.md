@@ -87,7 +87,18 @@ Originally conceived as a course project, Film Vault has evolved into a personal
 
 <!-- Built With -->
 ## Built With
-
+*Frontend:*
+* [![React][React-badge]][React-url]
+* [![JavaScript][Javascript-badge]][Javascript-url]
+* [![HTML5][HTML5-badge]][HTML5-url]
+* [![CSS][CSS-badge]][CSS-url]
+* [![Styled-components][Styled-Component-badge]][Styled-Component-url]
+* [![Netlify][Netlify-badge]][Netlify-url]
+<br/>
+*Backend:*
+* [![Python][Python-badge]][Python-url]
+* [![Django][Django-badge]][Django-url]
+* [![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
