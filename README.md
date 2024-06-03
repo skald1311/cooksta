@@ -63,25 +63,25 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Film Vault, our React-powered app, offers a streamlined way to track and rate your watched movies. Organize your cinematic adventures effortlessly in a secure digital vault, creating a personalized archive of your favorite films. With a user-friendly interface, Film Vault not only simplifies movie management but also integrates IMDb ratings, letting you see how others have rated the same films. Dive into a curated movie experience that combines your preferences with the collective insights of the IMDb community.
+After many disappointments with food not matching its menu picture, I decided to develop a food-focused social media app. This platform enables users to upload photos of food along with relevant information such as names and locations, ensuring others won't encounter similar disappointments.
+
+*Key Features:*
+
+1. Authentication (sign up and log in): Utilizes a context API to provide every component with knowledge of the current user's authentication status. The app restricts access to non-signed-in users, redirecting them to the login/signup page. Upon logging in, the frontend sends the username and password to the backend for authentication. Signing up involves sending new account data to be added to the database.
+
+2. Feed: To enhance user experience, fake data from real restaurants/people is integrated to simulate activity. Although an infinite scroll feature is not implemented due to the limited data, each post on the feed offers interactions such as redirection to the user's profile page by clicking the username, and to the post page by clicking the post image. Liking a post is facilitated by tapping the heart symbol.
+
+3. Ability to create new posts and like posts: The frontend sends post information to the backend for database inclusion, updating the user's post array with the post ID. Liking a post is accomplished by sending a request from the frontend, with the backend updating the post's like count.
+
+4. View your own and others' profiles: Features include hover-over functionality to display like counts on posts, and tapping on a photo leads to the full post.
+
+5. Account updating features (changing password, profile picture, and description): Utilizes the same backend communication pattern as previous features, enabling users to modify account details seamlessly.
+
+6. Dark mode and light mode: Dark mode and light mode: Implemented using CSS variables adjusted via the class attribute in the HTML tag, allowing for a dynamic change in appearance.
 
 
-
-Key Features:
-
-1. Effortless Movie Tracking: Utilizing a single-page app design principle, Film Vault provides a seamless and responsive user interface, offering an elegant and friendly feel for effortless movie tracking.
-
-2. Secure Local Storage: Film Vault leverages your browser's local storage, ensuring a secure and convenient way to store your watched list and ratings. This allows you to revisit and update your movie records at any time without the need for an external account.
-
-3. Automatic Rating Insights: Film Vault calculates and displays your average rating for your watched list. It also fetches the average IMDb user rating from the RESTful API OMDb, providing valuable insights for easy comparisons and a deeper understanding of your cinematic preferences.
-
-
-Enhance your projects effortlessly with our React StarRating Component. As a small but impactful side offering, we've crafted a dedicated API file that you can seamlessly download from our source code. This allows you to integrate our sleek star rating system directly into your React applications, bringing a touch of Film Vault's user-friendly design to your own projects. Elevate your UI effortlessly with our downloadable React Component, making cinematic flair a seamless addition to your development toolkit.
-
-Enhancing the user experience, Film Vault dynamically updates the document title with each selected movie, seamlessly achieved through the power of the useEffect hook. As you navigate through the movie list, the title of the document dynamically reflects the currently selected movie, offering a personalized touch to your cinematic journey. This subtle yet impactful feature ensures that each movie takes center stage, creating an immersive and tailored experience for every user interaction within the application
-
-Originally conceived as a course project, Film Vault has evolved into a personalized movie tracking experience that now reflects my unique style and preferences. While its inception may have been part of an academic journey, I've transformed the app by infusing it with a carefully curated color palette and minor details to align with my aesthetic vision.
-
+*Application Architecture:*
+The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify for ease of access, while an AWS EC2 instance hosts the backend. Although the backend API is initially fetched with HTTP, encountering issues with HTTP during hosting necessitated the implementation of Nginx and Gunicorn to enable HTTPS usage, ensuring compatibility with the EC2 instance's inbound rule and hosted URL.
 
 
 
