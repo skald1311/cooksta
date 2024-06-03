@@ -96,7 +96,7 @@ After many disappointments with food not matching its menu picture, I decided to
 *Application Architecture:*
 The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify for ease of access, while an AWS EC2 instance hosts the backend. Although the backend API is initially fetched with HTTP, encountering issues with HTTP during hosting necessitated the implementation of Nginx and Gunicorn to enable HTTPS usage, ensuring compatibility with the EC2 instance's inbound rule and hosted URL.
 
-
+The inspiration for this app was also drawn from a video game called "Dave the Diver."
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
