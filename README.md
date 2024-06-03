@@ -13,7 +13,7 @@
 <h3 align="center">Cooksta</h3>
 
   <p align="center">
-    Effortlessly track and rate your watched movies with this React-powered app
+    Explore and share your food adventures on this full-stack social platform
     <br />
     <a href="https://cooksta.netlify.app/"><strong>LIVE DEMO</strong></a>
     <br />
