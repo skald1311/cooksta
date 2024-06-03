@@ -67,7 +67,7 @@ After many disappointments with food not matching its menu picture, I decided to
 
 *Key Features:*
 
-1. Authentication (sign up and log in): Utilizes a context API to provide every component with knowledge of the current user's authentication status. The app restricts access to non-signed-in users, redirecting them to the login/signup page. Upon logging in, the frontend sends the username and password to the backend for authentication. Signing up involves sending new account data to be added to the database.
+1. Authentication (sign up, log in, log out): Utilizes a context API to provide every component with knowledge of the current user's authentication status. The app restricts access to non-signed-in users, redirecting them to the login/signup page. Upon logging in, the frontend sends the username and password to the backend for authentication. Signing up involves sending new account data to be added to the database.
    ![image](https://github.com/skald1311/cooksta/assets/84189062/8f433782-46b3-41cc-84f0-75fbdd137696)
 
 3. Feed: To enhance user experience, fake data from real restaurants/people is integrated to simulate activity. Although an infinite scroll feature is not implemented due to the limited data, each post on the feed offers interactions such as redirection to the user's profile page by clicking the username, and to the post page by clicking the post image. Liking a post is facilitated by tapping the heart symbol.
