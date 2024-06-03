@@ -65,8 +65,6 @@
 
 Film Vault, our React-powered app, offers a streamlined way to track and rate your watched movies. Organize your cinematic adventures effortlessly in a secure digital vault, creating a personalized archive of your favorite films. With a user-friendly interface, Film Vault not only simplifies movie management but also integrates IMDb ratings, letting you see how others have rated the same films. Dive into a curated movie experience that combines your preferences with the collective insights of the IMDb community.
 
-![image](https://github.com/skald1311/film-vault/assets/84189062/6ebed64f-e041-4c87-94cc-299fc65b0dd5)
-
 
 
 Key Features:
@@ -77,7 +75,6 @@ Key Features:
 
 3. Automatic Rating Insights: Film Vault calculates and displays your average rating for your watched list. It also fetches the average IMDb user rating from the RESTful API OMDb, providing valuable insights for easy comparisons and a deeper understanding of your cinematic preferences.
 
-![image](https://github.com/skald1311/film-vault/assets/84189062/028bd6f2-23d1-4602-8121-48a1aac914c5)
 
 Enhance your projects effortlessly with our React StarRating Component. As a small but impactful side offering, we've crafted a dedicated API file that you can seamlessly download from our source code. This allows you to integrate our sleek star rating system directly into your React applications, bringing a touch of Film Vault's user-friendly design to your own projects. Elevate your UI effortlessly with our downloadable React Component, making cinematic flair a seamless addition to your development toolkit.
 
@@ -120,9 +117,9 @@ Originally conceived as a course project, Film Vault has evolved into a personal
 
 **LIVE DEMO [HERE](https://cooksta.netlify.app/)**
 
-**Instructions for setting it up locally**
+**Since the application's data resides on MongoDB Atlas, you'll require the connection URL to access the database. However, as the URL contains my account's password, for security reasons, I haven't included the db_connection.py file. If you wish to host it locally, please reach out to me via LinkedIn, and I'll assist you in obtaining your own db_connection.py**
 
-To get a local copy up and running follow these simple example steps.
+Once you've obtained db_connection.py, you can follow these next steps
 
 1. Click the green button
 
@@ -139,15 +136,47 @@ To get a local copy up and running follow these simple example steps.
    Make sure all of the files are in the same folder!!!
    ```
 
-4. Install all the dependencies: Open cmd -> change directory to the folder that contains src and public folder -> then do the command below
+4. Paste the db_connection.py file into the "backend" folder
+
+5. Go into the "backend" folder
    ```sh
-   npm install
+   cd backend
    ```
 
-5. Still in cmd -> do command below
+6. Create a virtual environment and activate it
    ```sh
-   npm start
+   python -m venv .venv
+   . .venv/Scripts/activate
    ```
+   Some systems might be different (python3 rather python; . .venv/bin/activate rather than . .venv/Scripts/activate)
+
+7. Install backend dependencies 
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+7. Run the server
+   ```sh
+   python manage.py runserver
+   ```
+   In the terminal, you'll see a link, but it's not for the actual app. It's just for the backend server, so please refrain from clicking on it.
+
+8. Open up a new terminal and cd into the "frontend" folder
+   ```sh
+   cd frontend
+   ```
+   
+9. Install frontend dependencies
+   ```sh
+   npm i
+   ```
+
+10. Run frontend server
+   ```sh
+   npm run dev
+   ```
+  You'll find a link in the terminal. Hold down Control and left-click on the link to access it. Enjoy!
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
