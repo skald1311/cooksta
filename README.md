@@ -68,16 +68,29 @@ After many disappointments with food not matching its menu picture, I decided to
 *Key Features:*
 
 1. Authentication (sign up and log in): Utilizes a context API to provide every component with knowledge of the current user's authentication status. The app restricts access to non-signed-in users, redirecting them to the login/signup page. Upon logging in, the frontend sends the username and password to the backend for authentication. Signing up involves sending new account data to be added to the database.
+   ![image](https://github.com/skald1311/cooksta/assets/84189062/8f433782-46b3-41cc-84f0-75fbdd137696)
 
-2. Feed: To enhance user experience, fake data from real restaurants/people is integrated to simulate activity. Although an infinite scroll feature is not implemented due to the limited data, each post on the feed offers interactions such as redirection to the user's profile page by clicking the username, and to the post page by clicking the post image. Liking a post is facilitated by tapping the heart symbol.
+3. Feed: To enhance user experience, fake data from real restaurants/people is integrated to simulate activity. Although an infinite scroll feature is not implemented due to the limited data, each post on the feed offers interactions such as redirection to the user's profile page by clicking the username, and to the post page by clicking the post image. Liking a post is facilitated by tapping the heart symbol.
+   ![image](https://github.com/skald1311/cooksta/assets/84189062/c7f982b6-1049-4f2a-9b96-feec9419eb74)
 
-3. Ability to create new posts and like posts: The frontend sends post information to the backend for database inclusion, updating the user's post array with the post ID. Liking a post is accomplished by sending a request from the frontend, with the backend updating the post's like count.
+5. Ability to create new posts and like posts: The frontend sends post information to the backend for database inclusion, updating the user's post array with the post ID. Liking a post is accomplished by sending a request from the frontend, with the backend updating the post's like count.
+   ![image](https://github.com/skald1311/cooksta/assets/84189062/5d81981b-4323-4dc1-a6a8-ba760d6160d9)
 
-4. View your own and others' profiles: Features include hover-over functionality to display like counts on posts, and tapping on a photo leads to the full post.
 
-5. Account updating features (changing password, profile picture, and description): Utilizes the same backend communication pattern as previous features, enabling users to modify account details seamlessly.
+7. View your own and others' profiles: Features include hover-over functionality to display like counts on posts, and tapping on a photo leads to the full post.
+   ![image](https://github.com/skald1311/cooksta/assets/84189062/9a25971f-5692-4835-a4b3-7f8a18941d23)
+  ![image](https://github.com/skald1311/cooksta/assets/84189062/64c168bd-82a6-427a-8bc1-a791d0f04419)
+![image](https://github.com/skald1311/cooksta/assets/84189062/c9e9462b-18ca-40ce-833e-c78ad390471a)
 
-6. Dark mode and light mode: Dark mode and light mode: Implemented using CSS variables adjusted via the class attribute in the HTML tag, allowing for a dynamic change in appearance.
+
+9. Account updating features (changing password, profile picture, and description): Utilizes the same backend communication pattern as previous features, enabling users to modify account details seamlessly.
+    ![image](https://github.com/skald1311/cooksta/assets/84189062/b18758b2-b24a-4a77-8963-67bc0206e97d)
+
+
+11. Dark mode and light mode: Dark mode and light mode: Implemented using CSS variables adjusted via the class attribute in the HTML tag, allowing for a dynamic change in appearance.
+    ![image](https://github.com/skald1311/cooksta/assets/84189062/8be9e969-7fb7-464f-aec8-1dcd135f3149)
+    ![image](https://github.com/skald1311/cooksta/assets/84189062/826c8931-13c6-418e-a221-7b8c95801fbe)
+
 
 
 *Application Architecture:*
