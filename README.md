@@ -102,6 +102,7 @@ Originally conceived as a course project, Film Vault has evolved into a personal
 *Backend:*
 * [![Python][Python-badge]][Python-url]
 * [![Django][Django-badge]][Django-url]
+* [![MongoDB][Mongo-badge]][Mongo-url]
 * [![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
 
 
@@ -193,4 +194,6 @@ Project Link: [github.com/skald1311/film-vault](https://github.com/skald1311/fil
 [Netlify-url]: https://www.netlify.com
 [AWS-EC2-badge]: https://img.shields.io/badge/Amazon%20EC2-F90?logo=amazonec2&logoColor=fff&style=flat
 [AWS-EC2-url]: https://aws.amazon.com/ec2/
+[Mongo-badge]: https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=fff&style=flat
+[Mongo-url]: https://www.mongodb.com
 
