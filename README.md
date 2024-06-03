@@ -10,7 +10,7 @@
 
 
 
-<h3 align="center">Film Vault</h3>
+<h3 align="center">Cooksta</h3>
 
   <p align="center">
     Effortlessly track and rate your watched movies with this React-powered app
