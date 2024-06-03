@@ -1,15 +1,5 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
-[![React][React-badge]][React-url]
-[![JavaScript][Javascript-badge]][Javascript-url]
-[![Python][Python-badge]][Python-url]
-[![Django][Django-badge]][Django-url]
-[![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
-[![HTML5][HTML5-badge]][HTML5-url]
-[![CSS][CSS-badge]][CSS-url]
-[![Styled-components][Styled-Component-badge]][Styled-Component-url]
-[![Netlify][Netlify-badge]][Netlify-url]
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -28,9 +18,16 @@
     <a href="https://film-vault-dmhoang.netlify.app"><strong>LIVE DEMO</strong></a>
     <br />
     <br />
-    <a href="https://github.com/skald1311/film-vault/issues">Report Bug</a>
+    [![React][React-badge]][React-url]
+[![JavaScript][Javascript-badge]][Javascript-url]
+[![HTML5][HTML5-badge]][HTML5-url]
+[![CSS][CSS-badge]][CSS-url]
+[![Styled-components][Styled-Component-badge]][Styled-Component-url]
+[![Netlify][Netlify-badge]][Netlify-url]
     ·
-    <a href="https://github.com/skald1311/film-vault/issues">Request Feature</a>
+[![Python][Python-badge]][Python-url]
+[![Django][Django-badge]][Django-url]
+[![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
   </p>
 </div>
 
