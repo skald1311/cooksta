@@ -18,7 +18,7 @@
     <a href="https://film-vault-dmhoang.netlify.app"><strong>LIVE DEMO</strong></a>
     <br />
     <br />
-    [![React][React-badge]][React-url]
+    <a>[![React][React-badge]][React-url]</a>
   </p>
 </div>
 
