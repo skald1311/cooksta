@@ -1,15 +1,14 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
-![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
-![JavaScript Badge](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat)
-![Python Badge](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat)
-![Django Badge](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=flat)
-![Amazon EC2 Badge](https://img.shields.io/badge/Amazon%20EC2-F90?logo=amazonec2&logoColor=fff&style=flat)
-![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat)
-![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat)
-![styled-components Badge](https://img.shields.io/badge/styled--components-DB7093?logo=styledcomponents&logoColor=fff&style=flat)
-![Netlify Badge](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=fff&style=flat)
-
+[![React][React-badge]][React-url]
+[![JavaScript][Javascript-badge]][Javascript-url]
+[![Python][Python-badge]][Python-url]
+[![Django][Django-badge]][Django-url]
+[![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
+[![HTML5][HTML5-badge]][HTML5-url]
+[![CSS][CSS-badge]][CSS-url]
+[![Styled-components][Styled-Component-badge]][Styled-Component-url]
+[![Netlify][Netlify-badge]][Netlify-url]
 
 
 <!-- PROJECT LOGO -->
@@ -164,24 +163,24 @@ Project Link: [github.com/skald1311/film-vault](https://github.com/skald1311/fil
 
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat
 [linkedin-url]: https://www.linkedin.com/in/hmd1311/
-[Javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat
+[Javascript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat
 [Javascript-url]: https://www.javascript.com/
-[Python]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat
+[Python-badge]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat
 [Python-url]: https://www.python.org
-[HTML5]: https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat
+[HTML5-badge]: https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=flat
 [HTML5-url]: https://en.wikipedia.org/wiki/HTML
-[CSS]: https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat
+[CSS-badge]: https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat
 [CSS-url]: https://en.wikipedia.org/wiki/CSS
-[Pytorch]: https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff&style=flat
+[Pytorch-badge]: https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=fff&style=flat
 [Pytorch-url]: https://pytorch.org
-[React]: https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat
+[React-badge]: https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat
 [React-url]: https://react.dev
-[Django]: https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=flat
+[Django-badge]: https://img.shields.io/badge/Django-092E20?logo=django&logoColor=fff&style=flat
 [Django-url]: https://www.djangoproject.com
-[Styled-Component]: https://img.shields.io/badge/styled--components-DB7093?logo=styledcomponents&logoColor=fff&style=flat
+[Styled-Component-badge]: https://img.shields.io/badge/styled--components-DB7093?logo=styledcomponents&logoColor=fff&style=flat
 [Styled-Component-url]: https://styled-components.com
-[Netlify]: https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=fff&style=flat
+[Netlify-badge]: https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=fff&style=flat
 [Netlify-url]: https://www.netlify.com
-[AWS-EC2]: https://img.shields.io/badge/Amazon%20EC2-F90?logo=amazonec2&logoColor=fff&style=flat
+[AWS-EC2-badge]: https://img.shields.io/badge/Amazon%20EC2-F90?logo=amazonec2&logoColor=fff&style=flat
 [AWS-EC2-url]: https://aws.amazon.com/ec2/
 
