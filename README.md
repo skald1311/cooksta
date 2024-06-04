@@ -34,7 +34,7 @@
 [![Netlify][Netlify-badge]][Netlify-url]
 [![Python][Python-badge]][Python-url]
 [![Django][Django-badge]][Django-url]
-[![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
+[![Vercel][Vercel-badge]][Vercel-url]
 
 
 <!-- TABLE OF CONTENTS -->
@@ -94,7 +94,7 @@ After many disappointments with food not matching its menu picture, I decided to
 
 
 *Application Architecture:*
-The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify for ease of access, while an AWS EC2 instance hosts the backend. Although the backend API is initially fetched with HTTP, encountering issues with HTTP during hosting necessitated the implementation of Nginx and Gunicorn to enable HTTPS usage, ensuring compatibility with the EC2 instance's inbound rule and hosted URL.
+The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify, and Vercel hosts the backend. Due to complications with SSL certificate, I decided not to host the backend on an AWS EC2 instance anymore.
 
 The inspiration for this app was also drawn from a video game called "Dave the Diver."
 
@@ -118,7 +118,7 @@ The inspiration for this app was also drawn from a video game called "Dave the D
 * [![Python][Python-badge]][Python-url]
 * [![Django][Django-badge]][Django-url]
 * [![MongoDB][Mongo-badge]][Mongo-url]
-* [![AWS-EC2][AWS-EC2-badge]][AWS-EC2-url]
+* [![Vercel][Vercel-badge]][Vercel-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -245,5 +245,7 @@ Project Link: [cooksta.netlify.app](https://cooksta.netlify.app/)
 [Mongo-url]: https://www.mongodb.com
 [ReactRouter-badge]: https://img.shields.io/badge/React%20Router-CA4245?logo=reactrouter&logoColor=fff&style=flat
 [ReactRouter-url]: https://reactrouter.com/en/main
+[Vercel-badge]: https://img.shields.io/badge/Vercel-000?logo=vercel&logoColor=fff&style=flat
+[Vercel-url]: https://www.vercel.com
 
 <!--https://badges.pages.dev-->
