@@ -94,7 +94,7 @@ After many disappointments with food not matching its menu picture, I decided to
 
 
 *Application Architecture:*
-The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify, and Vercel hosts the backend. Due to complications with SSL certificate, I decided not to host the backend on an AWS EC2 instance anymore. Analyzing the queries, I noticed repetitive querying of the username field, prompting me to create an index for it to enhance query efficiency. Upon comparing query times before and after implementing the index, there was an average reduction of 55%, with query times dropping from 900ms to 350ms.
+The frontend is constructed using ReactJS and JavaScript, while the backend Django functions as an API facilitating communication with the hosted MongoDB Atlas cluster. For production hosting, the frontend is deployed on Netlify, and Vercel hosts the backend. Due to complications with SSL certificate, I decided not to host the backend on an AWS EC2 instance anymore. Analyzing the queries, I noticed repetitive querying of the username field, prompting me to create an index for it to enhance query efficiency. Upon comparing query times before and after implementing the index, there was an average reduction of 55%, with query times dropping from 900ms to 400ms.
 
 The inspiration for this app was also drawn from a video game called "Dave the Diver."
 
