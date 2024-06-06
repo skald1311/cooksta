@@ -13,7 +13,7 @@
 <h3 align="center">Cooksta</h3>
 
   <p align="center">
-    Explore and share your food adventures on this full-stack social platform
+    A food-related full-stack social media platform
     <br />
     <a href="https://cooksta.netlify.app/"><strong>LIVE DEMO</strong></a>
     <br />
