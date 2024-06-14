@@ -212,7 +212,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Duong Hoang - [LinkedIn](https://www.linkedin.com/in/hmd1311/)
+Duong Hoang - [LinkedIn](https://www.linkedin.com/in/duongmhoang/)
 
 Project Link: [cooksta.netlify.app](https://cooksta.netlify.app/)
 
@@ -220,7 +220,7 @@ Project Link: [cooksta.netlify.app](https://cooksta.netlify.app/)
 
 
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat
-[linkedin-url]: https://www.linkedin.com/in/hmd1311/
+[linkedin-url]: https://www.linkedin.com/in/duongmhoang/
 [Javascript-badge]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat
 [Javascript-url]: https://www.javascript.com/
 [Python-badge]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=flat
